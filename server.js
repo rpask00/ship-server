@@ -3,11 +3,11 @@ const socketPackage = require('socket.io');
 const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
 const path = require('path')
-
+const port = process.env.PORT || 3000;
 // App setup
 const app = express();
-let server = app.listen(3000, () => {
-    console.log('Listening at ' + 3000)
+let server = app.listen(port, () => {
+    console.log('Listening at ' + port)
 })
 
 app.use(express.static('public'))
