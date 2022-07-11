@@ -10,9 +10,6 @@ let server = app.listen(port, () => {
     console.log('Listening at ' + port)
 })
 
-app.use(express.static('public'))
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
-
 
 // Socket setup
 let io = socketPackage(server)
